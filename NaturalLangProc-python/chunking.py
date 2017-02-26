@@ -11,7 +11,8 @@ for i in tokens:
 	tagged=nltk.pos_tag(words)
 	print(tagged);
 	#we will chunk together nouns,verbs,adverbs
-	myChunk=r"""Chunk: {<RB.?>*<VB>*<NNP><NN>?}"""
+	myChunk=r"""Chunk: {<RB.?>*<VB.?>*<NNP><NN>?}"""
 	chunkParse=nltk.RegexpParser(myChunk);
 	chunked=chunkParse.parse(tagged);
 	print (chunked)
+	chunked.draw();#matplotlib must be installed to get the chunk tree. It helps to visualize your chunk data!
