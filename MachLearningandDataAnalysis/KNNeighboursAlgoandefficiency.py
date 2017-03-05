@@ -27,4 +27,4 @@ print(accuracy_score(Y_validation, predictions))
 print(confusion_matrix(Y_validation, predictions))
 #Detailed analysis of the Algorithm
 print(classification_report(Y_validation, predictions))
-val=raw_input();
+
